@@ -22,10 +22,18 @@
          flex-wrap: wrap;
       }
       video{
-         height: 300px;
-         width: 400px;
+         max-width: 100%; /* Ensures videos don't exceed their container */
+         height: auto; /* Maintains aspect ratio */
          object-fit: cover;
          padding: 8px;
+      }
+
+      /* Responsive styles */
+      @media only screen and (max-width: 768px) {
+         .main__left,
+         .main__right {
+            width: 100%;
+         }
       }
    </style>
 </head>
